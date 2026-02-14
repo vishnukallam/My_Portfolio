@@ -34,6 +34,12 @@ const About = () => {
         <h2 className="about-section-header">Contact Me</h2>
         <div className="contact-links">
           <a
+            href="tel:+919346618586"
+            className="contact-link"
+          >
+            <span>📞</span> +91 93466 18586
+          </a>
+          <a
             href="mailto:emailme.vishnuvardan@gamil.com"
             className="contact-link"
           >
