@@ -11,17 +11,19 @@ const Skills = () => {
   ];
 
   return (
-    <div className="space-y-12">
-      <div className="text-center space-y-4">
-        <h2 className="text-4xl font-bold text-white">Technical <span className="text-blue-500">Skills</span></h2>
-        <p className="text-slate-400 max-w-xl mx-auto">Technologies I work with to bring ideas to life.</p>
+    <div>
+      <div className="projects-header">
+        <h2 className="section-title">Technical <span className="text-accent">Skills</span></h2>
+        <p style={{ color: 'var(--text-muted)', maxWidth: '32rem', margin: '0 auto' }}>
+          Technologies I work with to bring ideas to life.
+        </p>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      <div className="skills-grid">
         {skills.map((skill) => (
-          <div key={skill.name} className="flex flex-col items-center justify-center p-8 bg-slate-900 rounded-2xl border border-slate-800 hover:border-blue-500/50 hover:bg-slate-800/50 transition-all duration-300 group">
-            <i className={`${skill.icon} text-6xl mb-4 group-hover:scale-110 transition-transform`}></i>
-            <span className="text-lg font-medium text-slate-300 group-hover:text-white">{skill.name}</span>
+          <div key={skill.name} className="skill-card">
+            <i className={skill.icon}></i>
+            <span className="skill-name">{skill.name}</span>
           </div>
         ))}
       </div>
