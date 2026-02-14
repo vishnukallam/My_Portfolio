@@ -39,31 +39,31 @@ const Certifications = () => {
   };
 
   return (
-    <div className="space-y-12">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-        <div className="text-left space-y-2">
-          <h2 className="text-4xl font-bold text-white">Certifications</h2>
-          <p className="text-slate-400">Validated expertise and academic achievements.</p>
+    <div>
+      <div className="certs-header">
+        <div style={{ textAlign: 'left' }}>
+          <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>Certifications</h2>
+          <p style={{ color: 'var(--text-muted)' }}>Validated expertise and academic achievements.</p>
         </div>
-        <label className="cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-all shadow-lg shadow-blue-900/40 flex items-center gap-2">
+        <label className="add-cert-btn">
           <span>➕ Add New Certificate</span>
-          <input type="file" className="hidden" onChange={handleUpload} accept="image/*" />
+          <input type="file" style={{ display: 'none' }} onChange={handleUpload} accept="image/*" />
         </label>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="projects-grid">
         {certs.map((cert, index) => (
-          <div key={index} className="bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:border-blue-500/50 transition-all group">
-            <div className="h-48 bg-slate-800/50 flex items-center justify-center p-8 overflow-hidden">
+          <div key={index} className="cert-card">
+            <div className="cert-img-container">
               <img
                 src={cert.image}
                 alt={cert.title}
-                className="max-h-full max-w-full object-contain group-hover:scale-110 transition-transform duration-500"
+                className="cert-img"
               />
             </div>
-            <div className="p-6 space-y-2">
-              <h3 className="text-xl font-bold text-white line-clamp-2">{cert.title}</h3>
-              <p className="text-blue-400 font-medium">{cert.issuer}</p>
+            <div className="cert-info">
+              <h3 className="cert-title">{cert.title}</h3>
+              <p className="cert-issuer">{cert.issuer}</p>
             </div>
           </div>
         ))}

@@ -5,13 +5,14 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Certifications from './pages/Certifications';
 import Navbar from './components/Navbar';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-slate-950 text-slate-50 font-sans">
+      <div className="min-h-screen">
         <Navbar />
-        <main className="container mx-auto px-4 py-8">
+        <main className="container py-8">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

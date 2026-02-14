@@ -21,23 +21,25 @@ const Projects = () => {
   ];
 
   return (
-    <div className="space-y-12">
-      <div className="text-center space-y-4">
-        <h2 className="text-4xl font-bold text-white">Featured <span className="text-blue-500">Projects</span></h2>
-        <p className="text-slate-400 max-w-xl mx-auto">A selection of my recent work in both hardware and software development.</p>
+    <div>
+      <div className="projects-header">
+        <h2 className="section-title">Featured <span className="text-accent">Projects</span></h2>
+        <p style={{ color: 'var(--text-muted)', maxWidth: '32rem', margin: '0 auto' }}>
+          A selection of my recent work in both hardware and software development.
+        </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="projects-grid">
         {projects.map((project) => (
-          <div key={project.title} className="group bg-slate-900 rounded-2xl border border-slate-800 p-8 hover:border-blue-500/50 transition-all duration-300 shadow-xl hover:shadow-blue-500/10">
-            <div className="text-4xl mb-6 bg-slate-800 w-16 h-16 flex items-center justify-center rounded-xl group-hover:scale-110 transition-transform">
+          <div key={project.title} className="project-card">
+            <div className="project-icon-box">
               {project.icon}
             </div>
-            <span className="text-xs font-bold uppercase tracking-wider text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full mb-4 inline-block">
+            <span className="project-tag">
               {project.tag}
             </span>
-            <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
-            <p className="text-slate-400 leading-relaxed">
+            <h3 style={{ fontSize: '1.5rem', fontWeight: '700', marginBottom: '1rem' }}>{project.title}</h3>
+            <p style={{ color: 'var(--text-muted)', lineHeight: '1.6' }}>
               {project.description}
             </p>
           </div>
