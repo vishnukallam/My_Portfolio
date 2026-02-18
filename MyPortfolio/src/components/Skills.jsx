@@ -12,13 +12,13 @@ const Skills = () => {
             <div className="skill-items">
               <div className="skill-item">
                 <div className="skill-icon">
-                  <i className="fab fa-python"></i>
+                  <i className="devicon-python-plain"></i>
                 </div>
                 <span className="skill-name">Python</span>
               </div>
               <div className="skill-item">
                 <div className="skill-icon">
-                  <i className="fab fa-java"></i>
+                  <i className="devicon-java-plain"></i>
                 </div>
                 <span className="skill-name">Core Java</span>
               </div>
@@ -30,19 +30,19 @@ const Skills = () => {
             <div className="skill-items">
               <div className="skill-item">
                 <div className="skill-icon">
-                  <i className="fab fa-html5"></i>
+                  <i className="devicon-html5-plain"></i>
                 </div>
                 <span className="skill-name">HTML</span>
               </div>
               <div className="skill-item">
                 <div className="skill-icon">
-                  <i className="fab fa-css3-alt"></i>
+                  <i className="devicon-css3-plain"></i>
                 </div>
                 <span className="skill-name">CSS</span>
               </div>
               <div className="skill-item">
                 <div className="skill-icon">
-                  <i className="fab fa-js"></i>
+                  <i className="devicon-javascript-plain"></i>
                 </div>
                 <span className="skill-name">JavaScript</span>
               </div>
@@ -52,15 +52,15 @@ const Skills = () => {
           <div className="skill-category">
             <h3>Databases</h3>
             <div className="skill-items">
-              <div class="skill-item">
+              <div className="skill-item">
                 <div className="skill-icon">
-                  <i className="fas fa-database"></i>
+                  <i className="devicon-mysql-plain"></i>
                 </div>
                 <span className="skill-name">SQL</span>
               </div>
               <div className="skill-item">
                 <div className="skill-icon">
-                  <i className="fas fa-leaf"></i>
+                  <i className="devicon-mongodb-plain"></i>
                 </div>
                 <span className="skill-name">MongoDB</span>
               </div>
@@ -72,7 +72,7 @@ const Skills = () => {
             <div className="skill-items">
               <div className="skill-item">
                 <div className="skill-icon">
-                  <i className="fab fa-git-alt"></i>
+                  <i className="devicon-git-plain"></i>
                 </div>
                 <span className="skill-name">Git</span>
               </div>

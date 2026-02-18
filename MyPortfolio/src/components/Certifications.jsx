@@ -5,6 +5,22 @@ import magnoCert from '../assets/certificates/thumb_magno_charger_certificate.jp
 
 const Certifications = () => {
   const [lightboxImage, setLightboxImage] = useState(null);
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const openLightbox = (image) => {
+    setLightboxImage(image);
+    setIsZoomed(false);
+  };
+
+  const closeLightbox = () => {
+    setLightboxImage(null);
+    setIsZoomed(false);
+  };
+
+  const toggleZoom = (e) => {
+    e.stopPropagation();
+    setIsZoomed(!isZoomed);
+  };
 
   const certs = [
     {
@@ -63,19 +79,25 @@ const Certifications = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            overflow: isZoomed ? 'auto' : 'hidden',
             cursor: 'zoom-out'
           }}
-          onClick={() => setLightboxImage(null)}
+          onClick={closeLightbox}
         >
           <img
             src={lightboxImage}
             alt="Certificate View"
             style={{
-              maxWidth: '90%',
-              maxHeight: '90%',
+              maxWidth: isZoomed ? 'none' : '90%',
+              maxHeight: isZoomed ? 'none' : '90%',
+              transform: isZoomed ? 'scale(1.5)' : 'scale(1)',
+              transition: 'transform 0.3s ease',
               borderRadius: '10px',
-              boxShadow: '0 0 50px rgba(0,0,0,0.5)'
+              boxShadow: '0 0 50px rgba(0,0,0,0.5)',
+              cursor: isZoomed ? 'zoom-out' : 'zoom-in',
+              margin: isZoomed ? 'auto' : '0'
             }}
+            onClick={toggleZoom}
           />
           <div
             style={{
